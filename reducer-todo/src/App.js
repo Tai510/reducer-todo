@@ -1,11 +1,13 @@
 import React from 'react';
-
 import './App.css';
+import TodoList from './components/TodoList';
+import { reducer, todo } from './reducers/reducer';
+
 
 function App() {
   return (
     <div className="App">
-     
+          <TodoList />
     </div>
   );
 }
