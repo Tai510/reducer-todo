@@ -20,3 +20,14 @@
 .App-link {
   color: #09d3ac;
 }
+
+
+
+
+.list.true {
+  text-decoration: line-through;
+ }
+ 
+ .list.false {
+     text-decoration: none;
+    }

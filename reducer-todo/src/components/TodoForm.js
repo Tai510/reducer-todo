@@ -1,6 +1,5 @@
-import React, {useState, useReducer } from 'react';
-import { reducer, todo } from '../reducers/reducer';
-import TodoList from './TodoList';
+import React, {useState} from 'react';
+
 
 const TodoForm = ({ dispatch }) => {
     const [item, setItem] = useState('');
@@ -16,7 +15,7 @@ const submitForm = e => {
       type: "ADD_TODO",
       payload: item
     });
-    setItem("");
+    setItem('');
   };
 
     return (

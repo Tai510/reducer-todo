@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import TodoList from './components/TodoList';
-import { reducer, todo } from './reducers/reducer';
+
 
 
 function App() {
