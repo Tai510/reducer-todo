@@ -32,8 +32,8 @@ const clearCompleted = e => {
                     <input name='item'  value={item} onChange={handleChanges}></input>
                 </div>
                 <div className='todo-buttons'>
-                    <button>Add</button>
-                    <button onClick={clearCompleted}>Clear</button>
+                    <button id='ADD'>Add</button>
+                    <button id='CC' onClick={clearCompleted}>Clear Completed</button>
                 </div>
             </form> {/* TodoForm end */}
         </div>
