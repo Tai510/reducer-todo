@@ -1,33 +1,72 @@
 .App {
   text-align: center;
+  border: 1px solid black;
+  background: #DD6423;
+  height: 700px;
+  width: 600px;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App h1 {
   color: white;
+  text-shadow: 1px 1px black;
 }
 
-.App-link {
-  color: #09d3ac;
+.TodoForm {
+  display: flex;
+  width: 600px;
+  margin: auto;
+  margin-top: 30px;
+  border-bottom: 2px solid white;
 }
 
+.TodoForm input {
+  background: #DD6423;
+  border: 1px solid #DD6423;
+  border-bottom: 1px solid white;
+  width: 345px;
+  margin-top: 5px;
+  outline: none;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-left: 55px;
+}
 
+.todo-buttons button {
+  width: 65px;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 3px solid black;
+  margin-right: 5px;
+  margin-top: 9px;
+  cursor: pointer;
+  outline: none;
+}
 
+.todo-buttons {
+  margin-left: 20px;
+}
+
+.todo-input input {
+  margin-top: 16px;
+}
 
 .list.true {
   text-decoration: line-through;
- }
+  color: white;
+}
  
- .list.false {
-     text-decoration: none;
-    }
+.list.false {
+  text-decoration: none;
+}
+
+.list p {
+  color: white;
+  font-size: 24px;
+  color: white;
+  text-shadow: 1px 1px black;
+  cursor: pointer;
+}

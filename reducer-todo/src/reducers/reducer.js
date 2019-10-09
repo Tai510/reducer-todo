@@ -1,5 +1,3 @@
-
-
 export const todo = [
   {
     item: "Learn about reducers",
@@ -10,7 +8,6 @@ export const todo = [
 
 export const reducer = (state, action) => {
   switch (action.type) {
-      
     case "ADD_TODO":
       return [
         ...state,
@@ -18,16 +15,20 @@ export const reducer = (state, action) => {
       ];
 
     case 'TOGGLE_COMPLETED':
-      return [
-            state.map(todo => {
-              if(todo.id === action.payload.id) {
+      return state.map(todo => {
+              if(todo.id === action.payload) {
                 return {...todo, completed: !todo.completed}
               }
               else {
                 return todo;
               }
           })
-      ];
+      
+
+      case 'CLEAR_COMPLETED':
+        return state.filter(todo => !todo.completed);
+      default:
+        return state;
 
   }
 };

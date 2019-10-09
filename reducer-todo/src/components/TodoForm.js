@@ -18,13 +18,24 @@ const submitForm = e => {
     setItem('');
   };
 
+const clearCompleted = e => {
+    e.preventDefault();
+    dispatch({
+        type: 'CLEAR_COMPLETED'
+    });
+}
+
     return (
         <div>
-            <form onSubmit={submitForm}>
-                <input name='item'  value={item} onChange={handleChanges}></input>
-                <button>ADD</button>
-                <button>CLEAR</button>
-            </form>
+            <form autocomplete="off" className='TodoForm' onSubmit={submitForm}>
+                <div className='todo-input'>
+                    <input name='item'  value={item} onChange={handleChanges}></input>
+                </div>
+                <div className='todo-buttons'>
+                    <button>Add</button>
+                    <button onClick={clearCompleted}>Clear</button>
+                </div>
+            </form> {/* TodoForm end */}
         </div>
     )
 };

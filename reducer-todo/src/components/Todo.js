@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Todo = ({todo, dispatch }) => {
-    const toggleCompleted = () => {
+    const lineThrough = () => {
         dispatch({
             type: 'TOGGLE_COMPLETED',
             payload: todo.id
@@ -10,7 +10,7 @@ const Todo = ({todo, dispatch }) => {
     };
 
     return (
-        <div className={`list ${todo.completed}`} onClick={()=> toggleCompleted(todo.id)}>
+        <div className={`list ${todo.completed}`} onClick={()=> lineThrough()}>
         <p>{todo.item}</p>
         </div>
     )
